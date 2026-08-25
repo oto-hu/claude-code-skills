@@ -11,7 +11,7 @@ description: NotionのタスクDBからタスクキューを取得し、今日�
 本業は稼働が少なくタスク管理の対象外。カレンダーの本業予定は空き時間の算出にだけ使う。
 
 - **タスクDB**: database_id `00000000-0000-0000-0000-000000000000` / data_source_id `00000000-0000-0000-0000-000000000000`
-  - プロパティ: タスク名(title)・事業(select: Standby Post/Standby Tech/その他個人事業/余白)・ボール(select: 自分/Claude/待ち)・ステータス(select: 未着手/進行中/完了)・期限(date)・メモ(rich_text)
+  - プロパティ: タスク名(title)・事業(select: Standby Post/Standby Tech/その他個人事業/新規事業)・ボール(select: 自分/Claude/待ち)・ステータス(select: 未着手/進行中/完了)・期限(date)・メモ(rich_text)
 - **個人事業カレンダー（プライマリ）**: `you@example.com`
 - **本業カレンダー（本業スケジュール）**: `work-calendar-id@group.calendar.google.com`
 

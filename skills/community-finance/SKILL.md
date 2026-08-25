@@ -1,19 +1,19 @@
 ---
-name: yurugru-finance
-description: ゆるグル（個人事業のコミュニティ）の月次収支をNotion収支DBに登録する。「ゆるグル収支」「ゆるグルの収支入れて」「今月のゆるグル収支」「ゆるグル 会計」と言われたとき、またはStripeの投げ銭・Google Cloud/FastSpring/ドメイン等の支出データ（スクショ/CSV/テキスト）を渡されたときに起動する。Stripe＝投げ銭収入、クラウド/SaaS/ドメイン＝支出として仕分け、公式Notion API経由で行を追加する。
+name: community-finance
+description: コミュニティ（個人事業のコミュニティ）の月次収支をNotion収支DBに登録する。「コミュニティ収支」「コミュニティの収支入れて」「今月のコミュニティ収支」「コミュニティ 会計」と言われたとき、またはStripeの投げ銭・Google Cloud/FastSpring/ドメイン等の支出データ（スクショ/CSV/テキスト）を渡されたときに起動する。Stripe＝投げ銭収入、クラウド/SaaS/ドメイン＝支出として仕分け、公式Notion API経由で行を追加する。
 ---
 
-# ゆるグル 収支登録スキル
+# コミュニティ 収支登録スキル
 
-毎月のゆるグル収支を、渡された明細（Stripeのスクショ、Google Cloud請求、FastSpringメール、ドメイン代など）から
-仕分けして **Notion「ゆるグル 収支管理」DB** に登録する。
+毎月のコミュニティ収支を、渡された明細（Stripeのスクショ、Google Cloud請求、FastSpringメール、ドメイン代など）から
+仕分けして **Notion「コミュニティ 収支管理」DB** に登録する。
 
 ## 対象DB
-- データベース: ゆるグル 収支管理
+- データベース: コミュニティ 収支管理
 - URL: https://app.notion.com/p/00000000000000000000000000000000
 - database_id: `00000000000000000000000000000000`
 - data_source: `collection://00000000-0000-0000-0000-000000000000`
-- 親ページ: 「ゆるグル」
+- 親ページ: 「コミュニティ」
 
 ## プロパティ（列）
 | 列 | 型 | 備考 |
@@ -29,7 +29,7 @@ description: ゆるグル（個人事業のコミュニティ）の月次収支�
 
 ## 仕分けルール（重要）
 1. **Stripeの決済 = 収入**。カテゴリは `投げ銭`、支払方法は `Stripe`。
-   - Stripe顧客一覧の「支出額合計」は顧客視点＝ゆるグルの収入。1顧客=1行。
+   - Stripe顧客一覧の「支出額合計」は顧客視点＝コミュニティの収入。1顧客=1行。
    - メモに顧客のメールアドレスを入れる。
 2. **Stripe以外（Google Cloud / FastSpring / ドメイン / SaaS等） = 支出**。
    - カテゴリは基本 `システム・ツール費`、支払方法は `クレジットカード`。
@@ -58,7 +58,7 @@ description: ゆるグル（個人事業のコミュニティ）の月次収支�
 3. 承認後、JSONをテンポラリに保存して投入スクリプトを実行する:
    ```bash
    /Users/you/projects/standby/case-management-package/.venv/bin/python \
-     /Users/you/.claude/skills/yurugru-finance/insert_transactions.py \
+     /Users/you/.claude/skills/community-finance/insert_transactions.py \
      <transactions.json のパス>
    ```
    - トークンは case-management-package/.env の `NOTION_TOKEN` を使用（このDBへアクセス可能）。

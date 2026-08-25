@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""ゆるグル収支DBへ取引行を一括投入する。
+"""コミュニティ収支DBへ取引行を一括投入する。
 
 使い方:
     <venv>/python insert_transactions.py transactions.json

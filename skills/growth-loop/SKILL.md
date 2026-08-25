@@ -91,7 +91,7 @@ cd /Users/you/projects/standby/growth-loop && .venv/bin/python scripts/collect_n
 | アカウント | 送客先 |
 |---|---|
 | `standby_tech` | HP `/ai-assessment` ← Standby Techの集客成果はこちらだけ |
-| `python_poikatsu`（表示名 python_man） | Amazonアフィリエイト。HPへの送客は目的ではない |
+| `sub_account`（別名義） | Amazonアフィリエイト。HPへの送客は目的ではない |
 
 **noteの `views` / `likes` は累計値。そのまま週次実績として報告しない。**
 先週の同名ファイルとの差分を取る。先週分が無ければ「基準取得のみ・未測定」と記録する。
