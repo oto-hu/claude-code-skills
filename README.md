@@ -47,6 +47,13 @@ cp -r claude-code-skills/skills/morning ~/.claude/skills/
 
 いくつかのスキルは外部サービスの MCP（Notion / Google Calendar / Gmail / GSC / GA4）を前提にしています。`kicho` は macOS の Excel、`video-edit` は `ffmpeg` が必要です。
 
+## 動く状態にするまでの導入キット（有料・1,980円）
+
+このリポジトリは置換済みで、CLAUDE.md や権限設定も含んでいないため、そのままでは動きません。
+「おはよう」で朝のレポートが出るまでの導入手順・CLAUDE.md の雛形・settings.json の雛形・hooks 2本・置換漏れの確認スクリプトをまとめたものを BOOTH に置いています。
+
+→ https://standbytech.booth.pm/items/8863683
+
 ## sanitize.py
 
 同梱の `sanitize.py` は、**このリポジトリを作るのに使った置換スクリプトそのもの**です。自分のスキルを公開したいときに、そのまま流用できます。
