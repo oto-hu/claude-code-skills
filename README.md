@@ -54,6 +54,13 @@ cp -r claude-code-skills/skills/morning ~/.claude/skills/
 
 → https://standbytech.booth.pm/items/8863683
 
+## 自分の業務のどこから始めるか
+
+ここに置いてあるのは、著者の業務に合わせて書かれたスキルです。同じものが自分の業務に刺さるとは限りません。
+毎月どの作業に何時間使っているかを洗い出して、最初の一本の候補を出すところまでを無料の診断にしてあります（1〜2分）。
+
+→ https://www.stand-bytech.com/ai-assessment?src=repo
+
 ## sanitize.py
 
 同梱の `sanitize.py` は、**このリポジトリを作るのに使った置換スクリプトそのもの**です。自分のスキルを公開したいときに、そのまま流用できます。
